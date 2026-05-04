@@ -1,0 +1,290 @@
+@font-face {
+  font-family: wenxue;
+  src:
+    url('/tower-game/assets/wenxue.eot'),
+    url('/tower-game/assets/wenxue.woff') format('woff'),
+    url('/tower-game/assets/wenxue.ttf') format('truetype'),
+    url('/tower-game/assets/wenxue.svg') format('svg');
+}
+
+.root {
+  height: 100vh;
+  position: relative;
+  background: #f95240 url('/tower-game/assets/main-bg.png');
+  text-align: center;
+  font-family: 'Helvetica Neue', arial, helvetica, sans-serif;
+}
+
+.back {
+  padding: 8px 12px;
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 20;
+  border-radius: 8px;
+  background: rgb(0, 0, 0, 0.25);
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  text-shadow: 0 1px 2px rgb(0, 0, 0, 0.45);
+
+  &:hover {
+    background: rgb(0, 0, 0, 0.4);
+  }
+}
+
+.fontWenxue {
+  font-family: wenxue, 'Helvetica Neue', sans-serif;
+}
+
+.canvas {
+  margin: auto;
+  position: fixed;
+  inset: 0;
+}
+
+.canvasHidden {
+  visibility: hidden;
+}
+
+.canvasVisible {
+  visibility: visible;
+}
+
+.loading {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 12;
+  background-color: #f05a50;
+  inset: 0;
+}
+
+.loadingMain {
+  margin: 0 auto;
+  width: 60%;
+  color: #fff;
+
+  img {
+    margin: 1rem auto 0;
+    width: 60%;
+  }
+}
+
+.title {
+  font-size: 30px;
+}
+
+.text {
+  font-size: 15px;
+}
+
+.bar {
+  margin: 10px 0;
+  width: 100%;
+  height: 12px;
+  border: 3px solid #fff;
+  border-radius: 60px;
+}
+
+.sub {
+  margin: 0.8px auto 0;
+  width: 98%;
+  height: 10px;
+}
+
+.percent {
+  width: 0;
+  height: 100%;
+  border-radius: 60px;
+  background-color: #fff;
+}
+
+.landing {
+  position: absolute;
+  z-index: 10;
+  inset: 0;
+  pointer-events: auto;
+}
+
+.landingBehind {
+  z-index: 1;
+  pointer-events: none;
+}
+
+.landingExit {
+  pointer-events: none;
+}
+
+.action1 {
+  padding-top: 10vh;
+}
+
+.titleImg {
+  width: 60%;
+}
+
+.action2 {
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+}
+
+.startBtn {
+  padding: 0;
+  display: inline-block;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.startImg {
+  width: 65%;
+}
+
+.swing {
+  animation: sw 2s ease-in-out alternate infinite;
+}
+
+@keyframes sw {
+  0% {
+    transform: rotate(5deg);
+    transform-origin: top center;
+  }
+
+  100% {
+    transform: rotate(-5deg);
+    transform-origin: top center;
+  }
+}
+
+.slideTop {
+  animation: st 1s ease-in-out forwards;
+}
+
+.slideBottom {
+  animation: sb 1s ease-in-out forwards;
+}
+
+@keyframes st {
+  0% {
+    transform: translateZ(0);
+  }
+
+  100% {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes sb {
+  0% {
+    transform: translateZ(0);
+  }
+
+  100% {
+    transform: translate3d(0, 200%, 0);
+  }
+}
+
+.modal {
+  position: fixed;
+  z-index: 15;
+  inset: 0;
+}
+
+.mask {
+  position: fixed;
+  background-color: #000;
+  inset: 0;
+  opacity: 0.6;
+}
+
+.modalContent {
+  margin-top: 30px;
+  width: 90%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.modalMain {
+  margin: 0 auto;
+  width: 85%;
+}
+
+.container {
+  position: relative;
+}
+
+.modalBg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.modalInner {
+  padding-top: 0;
+  margin-top: -40px;
+  width: 100%;
+  position: relative;
+}
+
+.overImg {
+  margin: 80px auto 0;
+  width: 80%;
+  display: block;
+}
+
+.overScore {
+  margin-top: -20px;
+  color: #ff735c;
+  font-size: 50px;
+  text-shadow:
+    -2px -2px 0 #fff,
+    2px -2px 0 #fff,
+    -2px 2px 0 #fff,
+    2px 2px 0 #fff;
+}
+
+.tip {
+  color: #9b724e;
+  font-size: 16px;
+
+  p {
+    margin: 0 0 8px;
+  }
+}
+
+.modalBtn {
+  padding: 0;
+  margin: 10px auto 0;
+  width: 70%;
+  display: block;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    vertical-align: middle;
+  }
+}
+
+.wxShare {
+  padding: 0;
+  position: fixed;
+  z-index: 16;
+  border: none;
+  background: rgb(0, 0, 0, 0.9);
+  cursor: pointer;
+  inset: 0;
+
+  img {
+    margin: 10px 10px 0 0;
+    width: 50%;
+    float: right;
+  }
+}
