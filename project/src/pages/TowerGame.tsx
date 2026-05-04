@@ -1,6 +1,5 @@
 import type { FC } from 'react';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
 import type { Engine } from 'cooljs';
 import { createTowerGame } from '@/features/tower-game/createTowerGame';
 import styles from './TowerGame.module.scss';
